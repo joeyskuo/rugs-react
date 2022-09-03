@@ -1,0 +1,10 @@
+
+.product-card--cart {
+    display: flex;
+    flex-direction: row;
+}
+
+.product-card--total {
+    display: flex;
+    justify-content: space-between;
+}

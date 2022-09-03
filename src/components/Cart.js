@@ -1,4 +1,5 @@
 import ProductCard from "./ProductCard";
+import "../css/_cart.css";
 
 const Cart = ({cartItems}) => {
     return (
