@@ -6,10 +6,10 @@ const ProductCard = ({product}) => {
             <img src={product.imgUrl}></img>
             <div>
                 <p>{product.name}</p>
-                <span className="product-card--total">
-                <p>Qty: 1</p>
-                <p>{product.price}</p>
-                </span>
+                <div className="product-card--total">
+                    <span>Qty: 1</span>
+                    <span>{product.price}</span>
+                </div>
             </div>
         </div>
     )
