@@ -1,4 +1,5 @@
 import Product from "./Product";
+import "../css/_product.css";
 
 const ProductList = ({products}) => {
 
