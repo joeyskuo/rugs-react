@@ -15,7 +15,7 @@ const Product = ({product}) => {
             <span>
                 <button>Remove</button>
                 <button>(-)</button>
-                <i class="fa-solid fa-cart-shopping"></i>
+                <i className="fa-solid fa-cart-shopping"></i>
                 <button>(+)</button>
             </span>
             <p>Cart Count</p>
