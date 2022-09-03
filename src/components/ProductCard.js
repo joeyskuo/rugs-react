@@ -1,6 +1,8 @@
 import "../css/_productCard.css";
+import convertToDollar from "../utils/currency";
 
 const ProductCard = ({product, quantity}) => {
+
     return(
         <div className="product-card--cart">
             <img src={product.imgUrl}></img>
@@ -8,7 +10,7 @@ const ProductCard = ({product, quantity}) => {
                 <p>{product.name}</p>
                 <div className="product-card--total">
                     <span>Qty: {quantity}</span>
-                    <span>{product.price}</span>
+                    <span>{convertToDollar(quantity * product.price)}</span>
                 </div>
             </div>
         </div>

@@ -1,5 +1,6 @@
 import ProductCard from "./ProductCard";
 import "../css/_cart.css";
+import convertToDollar from "../utils/currency";
 
 const Cart = ({cartItems, setShowCart}) => {
     return (

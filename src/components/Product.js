@@ -1,10 +1,8 @@
 
-const Product = ({product, setShowCart, addCartItem}) => {
+import convertToDollar from "../utils/currency";
 
-    const usDollar = Intl.NumberFormat("en-US", {
-        style: "currency",
-        currency: "USD"
-    });
+
+const Product = ({product, setShowCart, addCartItem}) => {
 
     const addProduct = () => {
         addCartItem(product);
@@ -16,7 +14,7 @@ const Product = ({product, setShowCart, addCartItem}) => {
             <img src={product.imgUrl}/>
             <p>{product.name}</p>
             <p>{product.collection}</p>
-            <p>{usDollar.format(product.price)}</p>
+            <p>{convertToDollar(product.price)}</p>
             <span>
                 <button>Remove</button>
                 <button>(-)</button>
