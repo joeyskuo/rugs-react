@@ -12,6 +12,13 @@ const Product = ({product}) => {
             <p>{product.name}</p>
             <p>{product.collection}</p>
             <p>{usDollar.format(product.price)}</p>
+            <span>
+                <button>Remove</button>
+                <button>(-)</button>
+                <i class="fa-solid fa-cart-shopping"></i>
+                <button>(+)</button>
+            </span>
+            <p>Cart Count</p>
         </div>
     )
 }
