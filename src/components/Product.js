@@ -1,5 +1,5 @@
 
-const Product = ({product}) => {
+const Product = ({product, setShowCart}) => {
 
     const usDollar = Intl.NumberFormat("en-US", {
         style: "currency",
@@ -16,7 +16,7 @@ const Product = ({product}) => {
                 <button>Remove</button>
                 <button>(-)</button>
                 <i className="fa-solid fa-cart-shopping"></i>
-                <button>(+)</button>
+                <button onClick={() => setShowCart(true)}>(+)</button>
             </span>
             <p>Cart Count</p>
         </div>

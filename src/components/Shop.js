@@ -10,11 +10,14 @@ const Shop = () => {
 
     return (
         <div id="shop">
-            <ProductList products={data.products}></ProductList>
+            <ProductList 
+                products={data.products}
+                setShowCart={setShowCart}
+            />
             {showCart && <Cart 
                             cartItems={data.products}
-                            setShowCart={setShowCart}>    
-                        </Cart>
+                            setShowCart={setShowCart}
+                         />    
             }
         </div>
     )
