@@ -1,10 +1,15 @@
 
-const Product = ({product, setShowCart}) => {
+const Product = ({product, setShowCart, addCartItem}) => {
 
     const usDollar = Intl.NumberFormat("en-US", {
         style: "currency",
         currency: "USD"
     });
+
+    const addProduct = () => {
+        addCartItem(product);
+        setShowCart(true);
+    }
 
     return (
         <div className="product-card--result">
@@ -16,7 +21,7 @@ const Product = ({product, setShowCart}) => {
                 <button>Remove</button>
                 <button>(-)</button>
                 <i className="fa-solid fa-cart-shopping"></i>
-                <button onClick={() => setShowCart(true)}>(+)</button>
+                <button onClick={() => addProduct()}>(+)</button>
             </span>
             <p>Cart Count</p>
         </div>
