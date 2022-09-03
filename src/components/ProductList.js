@@ -1,9 +1,17 @@
+import Product from "./Product";
 
-const ProductList = () => {
+const ProductList = ({products}) => {
 
     return (
-        <div>
-            
+        <div id="product-list">
+            {products.map((product) => (
+                <Product 
+                    key={product.parentProductId}
+                    product={product}
+                />
+            ))}
         </div>
     )
 }
+
+export default ProductList;
