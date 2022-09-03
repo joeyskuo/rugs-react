@@ -1,10 +1,10 @@
 import ProductCard from "./ProductCard";
 import "../css/_cart.css";
 
-const Cart = ({cartItems}) => {
+const Cart = ({cartItems, setShowCart}) => {
     return (
         <div id="cart">
-            <div className="cart-backdrop" onClick={() => {console.log("clicked")}}>
+            <div className="cart-backdrop" onClick={() => {setShowCart(false)}}>
             </div>
             <div className="cart-summary">
                 <div>
