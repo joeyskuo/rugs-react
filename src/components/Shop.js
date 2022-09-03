@@ -36,7 +36,7 @@ const Shop = () => {
                 addCartItem={addCartItem}
             />
             {showCart && <Cart 
-                            cartItems={data.products}
+                            cartItems={cartItems}
                             setShowCart={setShowCart}
                          />    
             }

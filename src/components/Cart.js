@@ -12,10 +12,11 @@ const Cart = ({cartItems, setShowCart}) => {
                     <span>X</span>
                 </div>
                 <div className="cart-summary--items">
-                    {cartItems.map((product) => (
+                    {Object.entries(cartItems).map(([productId, cartItem]) => (
                         <ProductCard
-                            key={product.parentProductId + "-cart"}
-                            product={product}
+                            key={productId + "-cart"}
+                            product={cartItem.product}
+                            quantity={cartItem.quantity}
                         />
                     ))}
                 </div>
