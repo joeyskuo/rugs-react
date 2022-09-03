@@ -1,8 +1,30 @@
 import ProductCard from "./ProductCard";
 import "../css/_cart.css";
 import convertToDollar from "../utils/currency";
+import { useState, useEffect } from "react";
 
 const Cart = ({cartItems, setShowCart}) => {
+
+    const [subTotal, setSubTotal] = useState(0);
+    const [itemCount, setItemCount] = useState(0);
+
+    useEffect(() => {
+        let total = 0;
+        let count = 0;
+
+        for(const item of Object.values(cartItems)) {
+            const price = item.product.price;
+            const quantity = item.quantity;
+            total += quantity * price;
+            count += quantity;
+        }
+
+        setSubTotal(total);
+        setItemCount(count);
+    },
+    [cartItems]);
+
+
     return (
         <div id="cart">
             <div className="cart-backdrop" onClick={() => {setShowCart(false)}}>
@@ -22,7 +44,7 @@ const Cart = ({cartItems, setShowCart}) => {
                     ))}
                 </div>
                 <div>
-                    <p>Subtotal (3 items):  $9600.00</p>
+                    <p>Subtotal ({itemCount} items):  {convertToDollar(subTotal)}</p>
                     <button>View Cart & Checkout</button>
                 </div>
             </div>
