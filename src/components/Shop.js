@@ -33,6 +33,10 @@ const Shop = () => {
         }
     }
 
+    const getCartItemCount = (productId) => {
+        const cartItem = cartItems[productId];
+        return (cartItem == undefined) ? 0 : cartItem.quantity;
+    }
 
     return (
         <div id="shop">
@@ -41,6 +45,7 @@ const Shop = () => {
                 setShowCart={setShowCart}
                 addCartItem={addCartItem}
                 removeCartItem={removeCartItem}
+                getCartItemCount={getCartItemCount}
             />
             {showCart && <Cart 
                             cartItems={cartItems}

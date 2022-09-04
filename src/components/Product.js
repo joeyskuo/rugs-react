@@ -1,16 +1,21 @@
 
+import { useState } from "react";
 import convertToDollar from "../utils/currency";
 
 
-const Product = ({product, setShowCart, addCartItem, removeCartItem}) => {
+const Product = ({product, setShowCart, addCartItem, removeCartItem, getCartItemCount}) => {
+
+    const [cartCount, setCartCount] = useState(0);
 
     const addProduct = () => {
         addCartItem(product);
+        setCartCount(getCartItemCount(product.product));
         setShowCart(true);
     }
 
     const removeProduct = (productId) => {
         removeCartItem(productId);
+        setCartCount(getCartItemCount(product.product));
     }
 
     return (
@@ -22,7 +27,7 @@ const Product = ({product, setShowCart, addCartItem, removeCartItem}) => {
             <p>Cart Count</p>
             <span className="product-buttons">
                 <button onClick={() => removeProduct(product.product)}><i class="fa-solid fa-minus"></i></button>
-                <span>1</span>
+                <span>{cartCount}</span>
                 <button onClick={() => addProduct()}><i class="fa-solid fa-plus"></i></button>
             </span>
             <div>
