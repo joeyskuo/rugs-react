@@ -1,5 +1,5 @@
 import Product from "./Product";
-import "../css/_product.css";
+import "../css/_productList.css";
 
 const ProductList = ({products, setShowCart, addCartItem, removeCartItem}) => {
 
