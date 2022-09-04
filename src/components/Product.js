@@ -26,7 +26,7 @@ const Product = ({product, setShowCart, addCartItem, removeCartItem}) => {
                 <button onClick={() => addProduct()}><i class="fa-solid fa-plus"></i></button>
             </span>
             <div>
-                <i className="fa-solid fa-cart-shopping"></i>
+                <i className="fa-solid fa-cart-shopping product-cart--icon" onClick={() => setShowCart(true)}></i>
             </div>
         </div>
     )
