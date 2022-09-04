@@ -2,11 +2,15 @@
 import convertToDollar from "../utils/currency";
 
 
-const Product = ({product, setShowCart, addCartItem}) => {
+const Product = ({product, setShowCart, addCartItem, removeCartItem}) => {
 
     const addProduct = () => {
         addCartItem(product);
         setShowCart(true);
+    }
+
+    const removeProduct = (productId) => {
+        removeCartItem(productId);
     }
 
     return (
@@ -17,7 +21,7 @@ const Product = ({product, setShowCart, addCartItem}) => {
             <p>{convertToDollar(product.price)}</p>
             <span>
                 <button>Remove</button>
-                <button>(-)</button>
+                <button onClick={() => removeProduct(product.product)}>(-)</button>
                 <i className="fa-solid fa-cart-shopping"></i>
                 <button onClick={() => addProduct()}>(+)</button>
             </span>

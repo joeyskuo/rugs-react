@@ -23,8 +23,14 @@ const Shop = () => {
         setCartItems(cartItems);
     }
 
-    const removeCartItem = () => {
-
+    const removeCartItem = (productId) => {
+        const cartItem = cartItems[productId];
+        if(cartItem != undefined) {
+            cartItem.quantity -= 1;
+            cartItems[productId] = cartItem;
+            if(cartItem.quantity == 0) delete cartItems[productId];
+            setCartItems(cartItems);
+        }
     }
 
 
@@ -34,6 +40,7 @@ const Shop = () => {
                 products={data.products}
                 setShowCart={setShowCart}
                 addCartItem={addCartItem}
+                removeCartItem={removeCartItem}
             />
             {showCart && <Cart 
                             cartItems={cartItems}

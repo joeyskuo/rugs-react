@@ -1,7 +1,7 @@
 import Product from "./Product";
 import "../css/_product.css";
 
-const ProductList = ({products, setShowCart, addCartItem}) => {
+const ProductList = ({products, setShowCart, addCartItem, removeCartItem}) => {
 
     return (
         <div id="product-list">
@@ -11,6 +11,7 @@ const ProductList = ({products, setShowCart, addCartItem}) => {
                     product={product}
                     setShowCart={setShowCart}
                     addCartItem={addCartItem}
+                    removeCartItem={removeCartItem}
                 />
             ))}
         </div>
