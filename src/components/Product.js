@@ -19,13 +19,15 @@ const Product = ({product, setShowCart, addCartItem, removeCartItem}) => {
             <p>{product.name}</p>
             <p>{product.collection}</p>
             <p>{convertToDollar(product.price)}</p>
-            <span>
-                <button>Remove</button>
-                <button onClick={() => removeProduct(product.product)}>(-)</button>
-                <i className="fa-solid fa-cart-shopping"></i>
-                <button onClick={() => addProduct()}>(+)</button>
-            </span>
             <p>Cart Count</p>
+            <span className="product-card--buttons">
+                <button onClick={() => removeProduct(product.product)}><i class="fa-solid fa-minus"></i></button>
+                <span>1</span>
+                <button onClick={() => addProduct()}><i class="fa-solid fa-plus"></i></button>
+            </span>
+            <div>
+                <i className="fa-solid fa-cart-shopping"></i>
+            </div>
         </div>
     )
 }
