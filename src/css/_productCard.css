@@ -9,7 +9,16 @@
     justify-content: space-between;
 }
 
-.product-card--buttons {
+.product-buttons {
     display: flex;
     justify-content: center;
+}
+
+.product-buttons > * {
+    margin: 5px;
+}
+
+.product-cart--icon:hover {
+    opacity: 60%;
+    cursor: pointer;
 }

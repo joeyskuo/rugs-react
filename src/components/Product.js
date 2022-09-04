@@ -14,13 +14,13 @@ const Product = ({product, setShowCart, addCartItem, removeCartItem}) => {
     }
 
     return (
-        <div className="product-card--result">
+        <div className="product-result">
             <img src={product.imgUrl}/>
             <p>{product.name}</p>
             <p>{product.collection}</p>
             <p>{convertToDollar(product.price)}</p>
             <p>Cart Count</p>
-            <span className="product-card--buttons">
+            <span className="product-buttons">
                 <button onClick={() => removeProduct(product.product)}><i class="fa-solid fa-minus"></i></button>
                 <span>1</span>
                 <button onClick={() => addProduct()}><i class="fa-solid fa-plus"></i></button>
