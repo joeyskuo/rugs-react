@@ -1,4 +1,4 @@
-
+import "../css/_productResult.css";
 import { useState } from "react";
 import convertToDollar from "../utils/currency";
 

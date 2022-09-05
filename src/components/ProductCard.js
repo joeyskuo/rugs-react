@@ -1,4 +1,4 @@
-import "../css/_productCard.css";
+import "../css/_cartProduct.css";
 import convertToDollar from "../utils/currency";
 
 const ProductCard = ({product, quantity}) => {
