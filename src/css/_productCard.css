@@ -4,9 +4,6 @@
 }
 
 .product-result {
-    height: 360px; 
-    width: 360px;
-
     display: grid;
     grid-template-rows: 50% 25% 25%;
     justify-content: center;
