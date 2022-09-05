@@ -40,13 +40,15 @@ const Shop = () => {
 
     return (
         <div id="shop">
-            <ProductList 
-                products={data.products}
-                setShowCart={setShowCart}
-                addCartItem={addCartItem}
-                removeCartItem={removeCartItem}
-                getCartItemCount={getCartItemCount}
-            />
+            <div className="shop-products--container">
+                <ProductList 
+                    products={data.products}
+                    setShowCart={setShowCart}
+                    addCartItem={addCartItem}
+                    removeCartItem={removeCartItem}
+                    getCartItemCount={getCartItemCount}
+                />
+            </div>
             {showCart && <Cart 
                             cartItems={cartItems}
                             setShowCart={setShowCart}

@@ -30,7 +30,7 @@ const Product = ({product, setShowCart, addCartItem, removeCartItem, getCartItem
             </div>
             <div className="product-result--description">
                 <p className="product-result--name">{product.name}</p>
-                <p>{product.collection}</p>
+                <p className="product-result--collection">{product.collection}</p>
                 <p>{convertToDollar(product.price)}</p>
             </div>
             <div className="product-result--cart">

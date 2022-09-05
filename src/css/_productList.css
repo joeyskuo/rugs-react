@@ -16,3 +16,14 @@
         grid-template-columns: repeat(4, 25%); 
     }
 }
+
+.shop-products--container {
+    width: 90%;
+    box-shadow: 12px 0 15px -4px rgba(19,33,66,.15), -12px 0 8px -4px rgba(19,33,66,.15);
+}
+
+#shop {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
