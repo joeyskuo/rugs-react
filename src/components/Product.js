@@ -22,7 +22,7 @@ const Product = ({product, setShowCart, addCartItem, removeCartItem, getCartItem
         <div className="product-result">
             <img src={product.imgUrl}/>
             <div className="product-result--description">
-                <p>{product.name}</p>
+                <p className="product-result--name">{product.name}</p>
                 <p>{product.collection}</p>
                 <p>{convertToDollar(product.price)}</p>
             </div>

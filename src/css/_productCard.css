@@ -36,3 +36,7 @@
 .product-result--cart > p, button, span {
     margin: 5px;
 }
+
+.product-result--name {
+    font-weight: 600;
+}
