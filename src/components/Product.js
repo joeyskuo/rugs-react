@@ -36,9 +36,9 @@ const Product = ({product, setShowCart, addCartItem, removeCartItem, getCartItem
             <div className="product-result--cart">
                 <p>Cart Count</p>
                 <span className="product-buttons">
-                    <button onClick={() => removeProduct(product.product)}><i class="fa-solid fa-minus"></i></button>
+                    <button onClick={() => removeProduct(product.product)}><i className="fa-solid fa-minus"></i></button>
                     <span>{cartCount}</span>
-                    <button onClick={() => addProduct()}><i class="fa-solid fa-plus"></i></button>
+                    <button onClick={() => addProduct()}><i className="fa-solid fa-plus"></i></button>
                 </span>
                 <div>
                     <i className="fa-solid fa-cart-shopping product-cart--icon" onClick={() => setShowCart(true)}></i>
