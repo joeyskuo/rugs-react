@@ -7,14 +7,26 @@
     background: rgba(0, 0, 0, 0.6);
 
     display: grid;
-    grid-template-columns: 80% 20%; 
+    grid-template-columns: 25% 75%; 
+}
+
+@media (min-width: 900px) {
+    #cart {
+        grid-template-columns: 60% 40%; 
+    }
+}
+
+@media (min-width: 1200px) {
+    #cart {
+        grid-template-columns: 75% 25%; 
+    }
 }
 
 .cart-summary {
-    position: absolute;
     right: 0;
     top: 0;
     height: 100%;
+    width: 100%;
     background: rgba(255, 255, 255, 1);
 
     display: grid;
