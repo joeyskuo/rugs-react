@@ -20,7 +20,9 @@ const Product = ({product, setShowCart, addCartItem, removeCartItem, getCartItem
 
     return (
         <div className="product-result">
-            <img src={product.imgUrl}/>
+            <div className="product-result--thumbnail">
+                <img className="product-result--image" src={rotateImage(product.imgUrl)}/>
+            </div>
             <div className="product-result--description">
                 <p className="product-result--name">{product.name}</p>
                 <p>{product.collection}</p>
