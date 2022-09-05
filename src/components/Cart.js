@@ -32,7 +32,7 @@ const Cart = ({cartItems, setShowCart}) => {
             <div className="cart-summary">
                 <div className="cart-summary--header">
                     <span className="cart-summary--title">Cart Summary</span>
-                    <i className="fa-sharp fa-solid fa-x cart-summary--close"></i>
+                    <i className="fa-sharp fa-solid fa-x cart-summary--close" onClick={() => {setShowCart(false)}}></i>
                 </div>
                 <div className="cart-summary--items">
                     {Object.entries(cartItems).map(([productId, cartItem]) => (
