@@ -21,17 +21,21 @@ const Product = ({product, setShowCart, addCartItem, removeCartItem, getCartItem
     return (
         <div className="product-result">
             <img src={product.imgUrl}/>
-            <p>{product.name}</p>
-            <p>{product.collection}</p>
-            <p>{convertToDollar(product.price)}</p>
-            <p>Cart Count</p>
-            <span className="product-buttons">
-                <button onClick={() => removeProduct(product.product)}><i class="fa-solid fa-minus"></i></button>
-                <span>{cartCount}</span>
-                <button onClick={() => addProduct()}><i class="fa-solid fa-plus"></i></button>
-            </span>
-            <div>
-                <i className="fa-solid fa-cart-shopping product-cart--icon" onClick={() => setShowCart(true)}></i>
+            <div className="product-result--description">
+                <p>{product.name}</p>
+                <p>{product.collection}</p>
+                <p>{convertToDollar(product.price)}</p>
+            </div>
+            <div className="product-result--cart">
+                <p>Cart Count</p>
+                <span className="product-buttons">
+                    <button onClick={() => removeProduct(product.product)}><i class="fa-solid fa-minus"></i></button>
+                    <span>{cartCount}</span>
+                    <button onClick={() => addProduct()}><i class="fa-solid fa-plus"></i></button>
+                </span>
+                <div>
+                    <i className="fa-solid fa-cart-shopping product-cart--icon" onClick={() => setShowCart(true)}></i>
+                </div>
             </div>
         </div>
     )
