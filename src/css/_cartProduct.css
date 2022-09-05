@@ -1,6 +1,12 @@
 .product-card--cart {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    align-items: center;
+
+    margin: 10px;
+    padding: 5px;
+
+    border: solid rgb(235, 239, 247);
 }
 
 .product-card--total {
@@ -11,4 +17,8 @@
 .product-cart--icon:hover {
     opacity: 60%;
     cursor: pointer;
+}
+
+.product-card--name {
+    font-weight: 600;
 }

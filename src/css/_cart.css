@@ -36,3 +36,25 @@
 .cart-summary--items {
     overflow: auto;
 }
+
+.cart-summary--header {
+    border-bottom: solid rgb(235, 239, 247);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.cart-summary--checkout {
+    border-top: solid rgb(235, 239, 247);
+}
+
+.cart-summary--close {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+}
+
+.cart-summary--title {
+    font-weight: 600;
+}

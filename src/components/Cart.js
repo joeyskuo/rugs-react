@@ -30,9 +30,9 @@ const Cart = ({cartItems, setShowCart}) => {
             <div className="cart-backdrop" onClick={() => {setShowCart(false)}}>
             </div>
             <div className="cart-summary">
-                <div>
-                    <span>Cart Summary</span>
-                    <span>X</span>
+                <div className="cart-summary--header">
+                    <span className="cart-summary--title">Cart Summary</span>
+                    <i className="fa-sharp fa-solid fa-x cart-summary--close"></i>
                 </div>
                 <div className="cart-summary--items">
                     {Object.entries(cartItems).map(([productId, cartItem]) => (
@@ -43,7 +43,7 @@ const Cart = ({cartItems, setShowCart}) => {
                         />
                     ))}
                 </div>
-                <div>
+                <div className="cart-summary--checkout">
                     <p>Subtotal ({itemCount} items):  {convertToDollar(subTotal)}</p>
                     <button>View Cart & Checkout</button>
                 </div>

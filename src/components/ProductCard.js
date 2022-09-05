@@ -5,9 +5,11 @@ const ProductCard = ({product, quantity}) => {
 
     return(
         <div className="product-card--cart">
-            <img src={product.imgUrl}></img>
+            <div className="product-card--thumbnail">
+                <img src={product.imgUrl}></img>
+            </div>
             <div>
-                <p>{product.name}</p>
+                <p className="product-card--name">{product.name}</p>
                 <div className="product-card--total">
                     <span>Qty: {quantity}</span>
                     <span>{convertToDollar(quantity * product.price)}</span>
