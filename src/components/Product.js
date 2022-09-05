@@ -18,6 +18,11 @@ const Product = ({product, setShowCart, addCartItem, removeCartItem, getCartItem
         setCartCount(getCartItemCount(product.product));
     }
 
+    const rotateImage = (url) => {
+        const baseUrl = url.match(/.*\.jpg/g);
+        return baseUrl + "?rotate=90";
+    }
+
     return (
         <div className="product-result">
             <div className="product-result--thumbnail">
