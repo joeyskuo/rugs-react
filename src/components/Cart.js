@@ -44,8 +44,8 @@ const Cart = ({cartItems, setShowCart}) => {
                     ))}
                 </div>
                 <div className="cart-summary--checkout">
-                    <p>Subtotal ({itemCount} items):  {convertToDollar(subTotal)}</p>
-                    <button>View Cart & Checkout</button>
+                    <p className="cart-summary--subtotal">Subtotal ({itemCount} items):  {convertToDollar(subTotal)}</p>
+                    <button className="cart-summary--checkout-button">View Cart & Checkout</button>
                 </div>
             </div>
         </div>
